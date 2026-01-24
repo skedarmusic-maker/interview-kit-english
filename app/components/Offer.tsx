@@ -70,9 +70,14 @@ export default function Offer() {
                                     <span className="text-gray-400">ou R$ 297,00 à vista</span>
                                 </div>
 
-                                <button className="w-full bg-green-500 hover:bg-green-400 text-black font-extrabold text-lg py-4 px-8 rounded-xl shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:shadow-[0_0_30px_rgba(34,197,94,0.6)] transition-all transform hover:-translate-y-1 mb-6">
+                                <a
+                                    href="https://pay.kiwify.com.br/L0AzUvb"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block w-full bg-green-500 hover:bg-green-400 text-black font-extrabold text-lg py-4 px-8 rounded-xl shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:shadow-[0_0_30px_rgba(34,197,94,0.6)] transition-all transform hover:-translate-y-1 mb-6"
+                                >
                                     QUERO MINHA APROVAÇÃO AGORA
-                                </button>
+                                </a>
 
                                 <div className="flex items-center gap-2 text-xs text-gray-500">
                                     <Lock className="w-3 h-3" />

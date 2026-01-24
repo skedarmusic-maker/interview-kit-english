@@ -81,7 +81,7 @@ export default function FAQ() {
                     <p>
                         Ainda tem alguma dúvida?{" "}
                         <a
-                            href="https://wa.me/5511999999999" // TODO: Update with actual number
+                            href="https://wa.me/5511958694687?text=Ol%C3%A1%20Teacher%20Patr%C3%ADcia!%20Li%20sobre%20o%20Kit%20de%20Entrevista%20e%20quero%20tirar%20uma%20d%C3%BAvida%20antes%20de%20entrar."
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-green-500 hover:text-green-400 font-bold underline decoration-2 underline-offset-4 transition-colors"
