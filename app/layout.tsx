@@ -24,6 +24,21 @@ export default function RootLayout({
       <body
         className={`${outfit.variable} antialiased`}
       >
+        {/* Google Ads Tag (gtag.js) - Moved to top for better detection */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16883342741"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16883342741');
+          `}
+        </Script>
+
+        {/* Existing GTM Script */}
         <Script id="gtm" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -39,18 +54,6 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-16883342741"
-          strategy="afterInteractive"
-        />
-        <Script id="google-ads" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-16883342741');
-          `}
-        </Script>
         {children}
       </body>
     </html>
