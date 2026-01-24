@@ -3,29 +3,24 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
 
 jobs:
-  build-and-deploy:
+  web-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: 1. Checkout do Código
-        uses: actions/checkout@v3
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
 
-      - name: 2. Instalar e Compilar (Next.js)
+      - name: 🔨 Build Project
         run: |
           npm install
           npm run build
 
-      - name: 3. Deploy para Hostinger
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./out/
           server-dir: ./
-          protocol: ftp
-          port: 21
-          timeout: 60000
-          log-level: verbose
