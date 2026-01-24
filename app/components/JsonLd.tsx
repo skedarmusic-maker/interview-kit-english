@@ -55,7 +55,8 @@ const JsonLd = () => {
                 "image": "https://vz-5af29887-36d.b-cdn.net/90b4a2ad-9a65-4179-8b32-69679527e1fa/thumbnail_9934a3ac.jpg",
                 "url": "https://interview.softenglish.com.br",
                 "brand": {
-                    "@id": "https://interview.softenglish.com.br/#organization"
+                    "@type": "Brand",
+                    "name": "SoftEnglish"
                 },
                 "offers": {
                     "@type": "Offer",
@@ -63,7 +64,27 @@ const JsonLd = () => {
                     "priceCurrency": "BRL",
                     "availability": "https://schema.org/InStock",
                     "url": "https://pay.kiwify.com.br/L0AzUvb",
-                    "priceValidUntil": "2026-12-31"
+                    "priceValidUntil": "2026-12-31",
+                    "hasMerchantReturnPolicy": {
+                        "@type": "MerchantReturnPolicy",
+                        "applicableCountry": "BR",
+                        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                        "merchantReturnDays": 7,
+                        "returnMethod": "https://schema.org/ReturnByMail",
+                        "returnFees": "https://schema.org/FreeReturn"
+                    },
+                    "shippingDetails": {
+                        "@type": "OfferShippingDetails",
+                        "shippingRate": {
+                            "@type": "MonetaryAmount",
+                            "value": 0,
+                            "currency": "BRL"
+                        },
+                        "shippingDestination": {
+                            "@type": "DefinedRegion",
+                            "addressCountry": "BR"
+                        }
+                    }
                 },
                 "aggregateRating": {
                     "@type": "AggregateRating",
