@@ -14,6 +14,14 @@ export default function Offer() {
         "Audiobook: Mindset de Aprovação Internacional"
     ];
 
+    const handleConversion = () => {
+        if (typeof window !== "undefined" && (window as any).gtag) {
+            (window as any).gtag('event', 'conversion', {
+                'send_to': 'AW-16883342741/_SteCL7X6esbEJW7zfI-'
+            });
+        }
+    };
+
     return (
         <section id="offer" className="py-24 bg-gradient-to-b from-black to-purple-900/20">
             <div className="container mx-auto px-4">
@@ -74,6 +82,7 @@ export default function Offer() {
                                     href="https://pay.kiwify.com.br/L0AzUvb"
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    onClick={handleConversion}
                                     className="relative z-10 flex items-center justify-center gap-2 w-full bg-green-500 hover:bg-green-400 text-black font-extrabold text-lg py-4 px-8 rounded-xl shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:shadow-[0_0_30px_rgba(34,197,94,0.6)] transition-all transform hover:-translate-y-1 mb-6 cursor-pointer"
                                 >
                                     QUERO MINHA APROVAÇÃO AGORA
