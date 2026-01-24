@@ -24,17 +24,18 @@ export default function RootLayout({
       <body
         className={`${outfit.variable} antialiased`}
       >
-        {/* Google Ads Tag (gtag.js) - Moved to top for better detection */}
+        {/* Google Tags (Ads + Analytics) - Moved to top for better detection */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-16883342741"
           strategy="afterInteractive"
         />
-        <Script id="google-ads" strategy="afterInteractive">
+        <Script id="google-tags" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'AW-16883342741');
+            gtag('config', 'G-M9QFZGM6SR');
           `}
         </Script>
 
