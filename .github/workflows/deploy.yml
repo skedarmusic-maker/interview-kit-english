@@ -25,3 +25,5 @@ jobs:
           local-dir: ./out/          # Ajustado para ./out/ pois é o padrão do Next.js
           server-dir: ./public_html/
           protocol: ftp
+          state-name: .ftp-deploy-sync-state-new.json
+          log-level: verbose
