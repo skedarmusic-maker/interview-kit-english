@@ -26,4 +26,6 @@ jobs:
           local-dir: ./out/
           server-dir: ./
           protocol: ftp
+          port: 21
+          timeout: 60000
           log-level: verbose
