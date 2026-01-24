@@ -16,6 +16,7 @@ jobs:
         run: |
           npm install
           npm run build
+          ls -R ./out/
 
       - name: 3. Deploy para Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -27,5 +28,5 @@ jobs:
           server-dir: ./
           protocol: ftp
           port: 21
-          timeout: 60000
+          timeout: 300000
           log-level: verbose
