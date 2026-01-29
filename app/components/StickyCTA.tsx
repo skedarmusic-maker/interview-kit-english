@@ -45,7 +45,7 @@ export default function StickyCTA() {
                     className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-neutral-900/90 backdrop-blur-md border-t border-white/10 md:hidden pb-safe"
                 >
                     <a
-                        href="https://pay.kiwify.com.br/L0AzUvb"
+                        href="https://pay.kiwify.com.br/L0AzUvb?sck=sticky"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="relative z-10 w-full bg-green-500 hover:bg-green-400 text-black font-extrabold text-lg py-3 px-6 rounded-xl shadow-[0_0_20px_rgba(34,197,94,0.4)] transition-all flex items-center justify-center gap-2 cursor-pointer"

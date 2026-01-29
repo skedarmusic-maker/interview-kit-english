@@ -73,7 +73,7 @@ export default function Offer() {
                                 </div>
 
                                 <a
-                                    href="https://pay.kiwify.com.br/L0AzUvb"
+                                    href="https://pay.kiwify.com.br/L0AzUvb?sck=offer"
                                     target="_blank"
                                     rel="noopener noreferrer"
 
