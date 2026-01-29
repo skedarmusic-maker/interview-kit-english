@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 export default function Storytelling() {
     return (
@@ -94,6 +95,25 @@ export default function Storytelling() {
                     </motion.div>
 
                 </div>
+
+                {/* Desktop CTA */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4 }}
+                    className="mt-12 text-center hidden md:block"
+                >
+                    <button
+                        onClick={() => document.getElementById("offer")?.scrollIntoView({ behavior: "smooth" })}
+                        className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-bold py-4 px-8 rounded-full transition-all hover:-translate-y-1 shadow-[0_0_20px_rgba(168,85,247,0.3)]"
+                    >
+                        NÃO QUERO PASSAR POR ISSO DE NOVO
+                        <ArrowRight className="w-5 h-5" />
+                    </button>
+                    <p className="text-gray-500 text-sm mt-3">Você não precisa sofrer sozinho. Existe um método.</p>
+                </motion.div>
+
             </div>
         </section>
     );

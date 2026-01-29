@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Play, CheckCircle } from "lucide-react";
+import { ArrowRight, Play, CheckCircle, Clock } from "lucide-react";
 import Image from "next/image";
 
 export default function Hero() {
@@ -31,27 +31,27 @@ export default function Hero() {
                     <span className="text-sm font-medium text-purple-200">Vagas Internacionais Abertas Agora</span>
                 </motion.div>
 
-                {/* Headline */}
+                {/* Headline - Mais Direto e "Dor" */}
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="text-4xl md:text-6xl font-bold leading-tight mb-6 tracking-tight max-w-4xl"
+                    className="text-4xl md:text-6xl font-bold leading-tight mb-6 tracking-tight max-w-5xl"
                 >
-                    Pare de temer o <br className="hidden md:block" />
+                    Passe na Entrevista em Inglês <br className="hidden md:block" />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 drop-shadow-[0_0_15px_rgba(168,85,247,0.5)]">
-                        'Tell me about yourself'
+                        Mesmo Sem Ser Fluente
                     </span>
                 </motion.h1>
 
-                {/* Subheadline Text - Discreto e Elegante */}
+                {/* Subheadline Text - Conecta Medo + Solução + Público */}
                 <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="text-sm md:text-base text-gray-400 mb-4 font-medium tracking-wide uppercase"
+                    className="text-lg md:text-xl text-gray-300 mb-8 font-normal max-w-3xl"
                 >
-                    Pressione o play para descobrir como destravar sua carreira internacional
+                    Respostas prontas, perguntas mais comuns e estrutura certa para entrevistas em <span className="text-white font-semibold">empresas internacionais, TI e Business.</span>
                 </motion.p>
 
                 {/* Video Component (VSL) */}
@@ -60,7 +60,7 @@ export default function Hero() {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
                     className="relative w-full max-w-4xl aspect-video bg-black rounded-xl shadow-2xl shadow-purple-900/20 overflow-hidden border border-white/10 mb-10 group"
-                    style={{ loading: "lazy" } as any} // Forced attribute for container as requested
+                    style={{ loading: "lazy" } as any}
                 >
                     {!isPlaying ? (
                         <div
@@ -72,7 +72,7 @@ export default function Hero() {
                                 alt="Vídeo: Como destravar sua carreira internacional"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                priority // LCP Optimized
+                                priority
                                 unoptimized
                             />
                             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors" />
@@ -93,23 +93,29 @@ export default function Hero() {
                     )}
                 </motion.div>
 
-                {/* CTA Button */}
+                {/* CTA Button & Urgency */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
-                    className="flex flex-col items-center gap-6"
+                    className="flex flex-col items-center gap-4"
                 >
                     <button
                         onClick={scrollToOffer}
-                        className="group relative inline-flex items-center justify-center bg-purple-600 hover:bg-purple-500 text-white font-extrabold text-lg md:text-xl py-5 px-12 rounded-full transition-all shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_40px_rgba(168,85,247,0.6)] hover:-translate-y-1"
+                        className="group relative inline-flex items-center justify-center bg-purple-600 hover:bg-purple-500 text-white font-extrabold text-lg md:text-xl py-5 px-12 rounded-full transition-all shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_40px_rgba(168,85,247,0.6)] hover:-translate-y-1 transform"
                     >
-                        QUERO MINHA APROVAÇÃO AGORA
+                        QUERO ME PREPARAR AGORA
                         <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
                     </button>
 
-                    {/* Footer Social Proof */}
-                    <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
+                    {/* Urgency Text */}
+                    <p className="text-red-400 font-medium text-sm md:text-base flex items-center gap-2 animate-pulse">
+                        <Clock className="w-4 h-4" />
+                        A entrevista acontece uma vez. A preparação não pode falhar.
+                    </p>
+
+                    {/* Footer Social Proof - Reorganized */}
+                    <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500 mt-4">
                         <div className="flex items-center gap-1">
                             <CheckCircle className="w-4 h-4 text-purple-500" />
                             <span>Acesso Imediato</span>
