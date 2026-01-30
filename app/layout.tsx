@@ -3,6 +3,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import JsonLd from "./components/JsonLd";
+import Clarity from "./components/Clarity";
 
 const outfit = Outfit({
   variable: "--font-geist-sans",
@@ -62,6 +63,7 @@ export default function RootLayout({
 
 
         <JsonLd />
+        <Clarity />
         {children}
       </body>
     </html>

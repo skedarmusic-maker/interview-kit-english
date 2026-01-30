@@ -48,6 +48,15 @@ export default function StickyCTA() {
                         href="https://pay.kiwify.com.br/L0AzUvb?sck=sticky"
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={() => {
+                            if (typeof window !== "undefined" && (window as any).gtag) {
+                                (window as any).gtag("event", "begin_checkout", {
+                                    currency: "BRL",
+                                    value: 297.00,
+                                    items: [{ item_name: "The Ultimate English Interview Kit" }]
+                                });
+                            }
+                        }}
                         className="relative z-10 w-full bg-green-500 hover:bg-green-400 text-black font-extrabold text-lg py-3 px-6 rounded-xl shadow-[0_0_20px_rgba(34,197,94,0.4)] transition-all flex items-center justify-center gap-2 cursor-pointer"
                     >
                         QUERO GARANTIR MINHAS RESPOSTAS
